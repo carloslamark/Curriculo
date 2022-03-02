@@ -36,11 +36,12 @@ header{
 .top-bar div p{
     font-weight: Bold;
     color: #CAD2C5;
-    font-size: 2vw;
+    font-size: clamp(0px, 2vw, 90px);
     transition: 0.2s;
+    margin: 0;
 }
 .top-bar div .p1{
-    font-size: 3.2vw !important;
+    font-size: clamp(0px, 3.2vw, 120px) !important;
     transition: 0.2s;
 }
 .top-bar div{
@@ -66,6 +67,15 @@ header{
     width: 2px;
     height: 60%;
     transition: 0.2s;
+}
+.taskbar a{
+    text-decoration: none;
+    color: black;
+}
+.aux-taskbar{
+    margin-top:-200px;
+    margin-bottom: 200px;
+    z-index: -1;
 }
 
 /* Sticky */
@@ -101,10 +111,10 @@ header.sticky .top-bar div p{
     font-size: 24px;
 }
 
-/* Skills */
+/* skills */
 .skills{
     width: 100%;
-    height: 900px;
+    height: 130vh;
     background-color: #BFDBF7;
     display: flex;
     flex-direction: column;
@@ -116,7 +126,7 @@ header.sticky .top-bar div p{
     width: 100%;
     margin: 50px 0;
 }
-.r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8, .r9{
+.r1-s, .r2-s, .r3-s, .r4-s, .r5-s, .r6-s, .r7-s, .r8-s, .r9-s{
     width: 20%;
     height: 20vh;
     background-color: white;
@@ -128,78 +138,99 @@ header.sticky .top-bar div p{
     border-radius: 20px;
     transition: 0.4s;
 }
-.r1 p, .r2 p, .r3 p, .r4 p, .r5 p, .r6 p, .r7 p, .r8 p, .r9 p{
+.r1-s p, .r2-s p, .r3-s p, .r4-s p, .r5-s p, .r6-s p, .r7-s p, .r8-s p, .r9-s p{
     display: none;
     font-size: 1.2vw;
     margin-top: -15px;
 }
-.r1 .p-top, .r2 .p-top, .r3 .p-top, .r4 .p-top, .r5 .p-top, .r6 .p-top, .r7 .p-top, .r8 .p-top, .r9 .p-top{
+.r1-s .p-top, .r2-s .p-top, .r3-s .p-top, .r4-s .p-top, .r5-s .p-top, .r6-s .p-top, .r7-s .p-top, .r8-s .p-top, .r9-s .p-top{
     font-size: 1.4vw;
     font-weight: bold;
     margin-top: 0;
 }
-.r1:hover p, .r2:hover p, .r3:hover p, .r4:hover p, .r5:hover p, .r6:hover p, .r7:hover p, .r8:hover p, .r9:hover p{
+.r1-s:hover p, .r2-s:hover p, .r3-s:hover p, .r4-s:hover p, .r5-s:hover p, .r6-s:hover p, .r7-s:hover p, .r8-s:hover p, .r9-s:hover p{
     display: flex;
 }
-.r1 img, .r2 img, .r3 img, .r4 img, .r5 img, .r6 img, .r7 img, .r8 img, .r9 div{
+.r1-s img, .r2-s img, .r3-s img, .r4-s img, .r5-s img, .r6-s img, .r7-s img, .r8-s img, .r9-s div{
     margin-top: 1vh;
 }
-.r1:hover{
+.r1-s:hover{
     background-color: #FF551D;
     height: 30vh;
 } 
-.r2:hover{
+.r2-s:hover{
     background-color: #0074BE;
     height: 30vh;
 } 
-.r3:hover{
+.r3-s:hover{
     background-color: #F8DC3E;
     height: 30vh;
 } 
-.r4:hover{
+.r4-s:hover{
     background-color: #D19FFF;
     height: 30vh;
 } 
-.r5:hover{
+.r5-s:hover{
     background-color: #3CA3DD;
     height: 30vh;
 } 
-.r6:hover{
+.r6-s:hover{
     background-color: #7F8B9A;
     height: 30vh;
 } 
-.r7:hover{
+.r7-s:hover{
     background-color: #8694C1;
     height: 30vh;
 }
-.r8:hover{
+.r8-s:hover{
     background-color: #706B6A;
     height: 30vh;
 }
- .r9:hover{
+ .r9-s:hover{
     background-color: #743F2D;
     height: 30vh;
 }
 
-
-
-
-
-
-/* Projects */
+/* projects */
 .projects{
     width: 100%;
-    height: 600px;
+    height: 130vh;
     background-color: #1F7A8C;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.projects .r2-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+.r1-p, .r2-p{
+    height: 12vh;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #222222;
+    border:5px solid #E5F4E3;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+.r1-p p, .r2-p p{
+    margin: 0;
+    color: #E5F4E3;
+}
+.r1-p .p-top, .r2-p .p-top{
+    font-size: clamp(0px, 2vw, 100px) !important;
+}
 
 /* about */
 .about{
     width: 100%;
-    height: 600px;
+    height: 120vh;
     background-color: #BFDBF7;
     display: flex;
     flex-direction: column;
@@ -209,7 +240,7 @@ header.sticky .top-bar div p{
 /* contact */
 .contact{
     width: 100%;
-    height: 600px;
+    height: 120vh;
     background-color: #1F7A8C;
     display: flex;
     flex-direction: column;
