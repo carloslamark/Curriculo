@@ -121,13 +121,27 @@ header.sticky .top-bar div p{
     height: 20vh;
     background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     border:5px solid #022B3A;
     border-radius: 20px;
     transition: 0.4s;
 }
-.r1 img, .r2 img, .r3 img, .r4 img, .r5 img, .r6 img, .r7 img, .r8 img, .r9 img{
+.r1 p, .r2 p, .r3 p, .r4 p, .r5 p, .r6 p, .r7 p, .r8 p, .r9 p{
+    display: none;
+    font-size: 1.2vw;
+    margin-top: -15px;
+}
+.r1 .p-top, .r2 .p-top, .r3 .p-top, .r4 .p-top, .r5 .p-top, .r6 .p-top, .r7 .p-top, .r8 .p-top, .r9 .p-top{
+    font-size: 1.4vw;
+    font-weight: bold;
+    margin-top: 0;
+}
+.r1:hover p, .r2:hover p, .r3:hover p, .r4:hover p, .r5:hover p, .r6:hover p, .r7:hover p, .r8:hover p, .r9:hover p{
+    display: flex;
+}
+.r1 img, .r2 img, .r3 img, .r4 img, .r5 img, .r6 img, .r7 img, .r8 img, .r9 div{
     margin-top: 1vh;
 }
 .r1:hover{
