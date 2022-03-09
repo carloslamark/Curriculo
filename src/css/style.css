@@ -115,7 +115,6 @@ header.sticky .top-bar div p{
 /* skills */
 .skills{
     width: 100%;
-    height: 130vh;
     background-color: #BFDBF7;
     display: flex;
     flex-direction: column;
@@ -127,6 +126,13 @@ header.sticky .top-bar div p{
     align-items: flex-start;
     width: 100%;
     margin: 50px 0;
+}
+.skills .r-container-mobile{
+    display: none;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    margin: 20px 0;
 }
 .r1-s, .r2-s, .r3-s, .r4-s, .r5-s, .r6-s, .r7-s, .r8-s, .r9-s{
     width: 20%;
@@ -208,7 +214,6 @@ header.sticky .top-bar div p{
 /* projects */
 .projects{
     width: 100%;
-    height: 70vh;
     background-color: #1F7A8C;
     display: flex;
     flex-direction: column;
@@ -220,6 +225,7 @@ header.sticky .top-bar div p{
     align-items:flex-start;
     justify-content: space-around;
     margin-top: 4%;
+    margin-bottom: 4%;
 }
 .r1-p, .r2-p{
     height: 12vh;
@@ -268,7 +274,6 @@ header.sticky .top-bar div p{
 /* about */
 .about{
     width: 100%;
-    height: 90vh;
     background-color: #BFDBF7;
     display: flex;
     flex-direction: column;
@@ -328,7 +333,6 @@ header.sticky .top-bar div p{
 /* contact */
 .contact{
     width: 100%;
-    height: 70vh;
     background-color: #1F7A8C;
     display: flex;
     flex-direction: column;
@@ -350,10 +354,10 @@ header.sticky .top-bar div p{
     cursor: pointer;
 }
 
-
-@media only screen and (max-height: 650px) {
+/* mobile */
+@media only screen and (max-width: 650px) {
     .skills{
-        height: 140vh;
+        
     }
 }
 @media only screen and (max-width: 1024px){
@@ -361,7 +365,7 @@ header.sticky .top-bar div p{
         height: 50%;
     }
     .r9-s div img{
-        width: 60%;
+        width: 50%;
     }
 }
 @media only screen and (max-width: 780px){
@@ -379,5 +383,70 @@ header.sticky .top-bar div p{
     }
     .r1-a:hover, .r2-a:hover, .r3-a:hover, .r4-a:hover, .r5-a:hover, .r6-a:hover {
         height: 24vh;
+    }
+    /* Top-bar */
+    .top-bar img{
+        height: 60%;
+        transition: 0.2s;
+    }
+    .top-bar div p{
+        font-size: clamp(0px, 3vw, 90px);
+    }
+    .top-bar div .p1{
+        font-size: clamp(0px, 4vw, 120px) !important;
+    }
+    /* TaskBar */
+    .taskbar{
+        height: 8vh;
+        margin-top: 36vh;     
+        font-size: 15px;  
+    }
+    .aux-taskbar{
+        margin-top:-150px;
+        margin-bottom: 150px;
+    }
+    /* Sticky */
+    header.sticky .top-bar{
+        height: 120px;
+    }
+    header.sticky .taskbar{
+        margin-top: 120px;
+    }
+    header.sticky .top-bar div .p1{
+        font-size: 4vw !important;
+    }
+    header.sticky .top-bar div p{
+        font-size: 2vw;
+    }
+    /* skills */
+    .r-container{
+        display: none !important;
+    }
+    .r-container-mobile{
+        display: flex !important;
+    }
+    .r1-s, .r2-s, .r3-s, .r4-s, .r5-s, .r6-s, .r7-s, .r8-s, .r9-s{
+        width: 35%;
+        height: 16vh;
+    }
+    .r1-s:hover, .r2-s:hover, .r3-s:hover, .r4-s:hover, .r5-s:hover, .r6-s:hover, .r7-s:hover, .r8-s:hover, .r9-s:hover{
+        height: 25vh;
+    }
+    .r1-s:hover img, .r2-s:hover img, .r3-s:hover img, .r4-s:hover img, .r5-s:hover img, .r6-s:hover img, .r7-s:hover img, .r8-s:hover img{
+        height: 30%;
+    }
+    .r9-s:hover img{
+        width: 30%;
+    }
+    .r1-s .p-top, .r2-s .p-top, .r3-s .p-top, .r4-s .p-top, .r5-s .p-top, .r6-s .p-top, .r7-s .p-top, .r8-s .p-top, .r9-s .p-top{
+        font-size: 3.4vw;
+    }
+    .r1-s p, .r2-s p, .r3-s p, .r4-s p, .r5-s p, .r6-s p, .r7-s p, .r8-s p, .r9-s p{
+        font-size: clamp(0px, 3.2vw, 15px);
+    }
+}
+@media only screen and (max-width: 600px){
+    .r1-s:hover, .r2-s:hover, .r3-s:hover, .r4-s:hover, .r5-s:hover, .r6-s:hover, .r7-s:hover, .r8-s:hover, .r9-s:hover{
+        height: 20vh;
     }
 }
