@@ -224,8 +224,7 @@ header.sticky .top-bar div p{
     display: flex;
     align-items:flex-start;
     justify-content: space-around;
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin: 5% 0;
 }
 .r1-p, .r2-p{
     height: 12vh;
@@ -253,22 +252,22 @@ header.sticky .top-bar div p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1%;
+    margin-top: 3%;
 }
 .r1-p div p, .r1-p div a, .r2-p div p, .r2-p div a{
     font-size: 0px;
     color: #222222;
+    text-align: center;
     transition: 0.6s;
 }
 .r1-p:hover, .r2-p:hover{
     height: 25vh;
-    justify-content: flex-start;
-    padding-top: 2%;
+    justify-content: space-evenly;
+    padding: 2% 0;
 }
 .r1-p:hover div p, .r1-p:hover div a, .r2-p:hover div p, .r2-p:hover div a{
     font-size: clamp(0px, 1.5vw, 100px);
     color: #E5F4E3;
-    margin-top: 1%;
 }
 
 /* about */
@@ -285,6 +284,9 @@ header.sticky .top-bar div p{
     align-items: flex-start;
     justify-content: space-around;
     margin: 5vh 0;
+}
+.about #mobileAbout{
+    display: none;
 }
 .r1-a, .r2-a, .r3-a, .r4-a, .r5-a, .r6-a{
     width: 20%;
@@ -318,12 +320,8 @@ header.sticky .top-bar div p{
     transition: 0.4s;
 }
 .r1-a:hover, .r2-a:hover, .r3-a:hover, .r4-a:hover, .r5-a:hover, .r6-a:hover{
-    justify-content: flex-start;
+    justify-content: space-evenly;
     height: 30vh;
-    padding-top: 3%;
-}
-.r1-a:hover div, .r2-a:hover div, .r3-a:hover div, .r4-a:hover div, .r5-a:hover div, .r6-a:hover div{
-    margin-top: 5%;
 }
 .r1-a:hover div p, .r2-a:hover div p, .r3-a:hover div p, .r4-a:hover div p, .r5-a:hover div p, .r6-a:hover div p{
     font-size: clamp(0px, 1.3vw, 100px);
@@ -355,11 +353,6 @@ header.sticky .top-bar div p{
 }
 
 /* mobile */
-@media only screen and (max-width: 650px) {
-    .skills{
-        
-    }
-}
 @media only screen and (max-width: 1024px){
     .skills img{
         height: 50%;
@@ -377,12 +370,6 @@ header.sticky .top-bar div p{
     }
     .taskbar{
         margin-top: 36vh;   
-    }
-    .r1-p:hover, .r2-p:hover{
-        height: 19vh;
-    }
-    .r1-a:hover, .r2-a:hover, .r3-a:hover, .r4-a:hover, .r5-a:hover, .r6-a:hover {
-        height: 24vh;
     }
     /* Top-bar */
     .top-bar img{
@@ -443,6 +430,56 @@ header.sticky .top-bar div p{
     }
     .r1-s p, .r2-s p, .r3-s p, .r4-s p, .r5-s p, .r6-s p, .r7-s p, .r8-s p, .r9-s p{
         font-size: clamp(0px, 3.2vw, 15px);
+    }
+
+    /* projects */
+    .r1-p .p-top, .r2-p .p-top{
+        font-size: clamp(0px, 4vw, 100px) !important;
+    }
+    .r1-p:hover, .r2-p:hover{
+        height: 15vh;
+    }
+    .r1-p, .r2-p{
+        width: 40%;
+    }
+    .r1-p:hover div p, .r1-p:hover div a, .r2-p:hover div p, .r2-p:hover div a{
+        font-size: clamp(0px, 2.5vw, 100px);
+        margin-top: 2%;
+    }
+
+    /* about */
+    .about .r3-container{
+        margin: 3vh 0;
+    }
+    .about #mobileAbout{
+        display: flex;
+    }
+    .about .r3-container .r3-a,.about .r3-container .r4-a{
+        display: none;
+    }
+    .about #mobileAbout .r3-a, .about #mobileAbout .r4-a{
+        display: flex;
+    }
+    .r1-a, .r2-a, .r3-a, .r4-a, .r5-a, .r6-a{
+        width: 40%;
+        height: 10vh;
+    }
+    .r1-a:hover, .r2-a:hover, .r3-a:hover, .r4-a:hover, .r5-a:hover, .r6-a:hover {
+        height: 18vh;
+    }
+    .about .p-top{
+        font-size: clamp(0px, 3vw, 100px) !important;
+    }
+    .r1-a:hover div p, .r2-a:hover div p, .r3-a:hover div p, .r4-a:hover div p, .r5-a:hover div p, .r6-a:hover div p{
+        font-size: clamp(0px, 2.3vw, 100px);
+    }
+
+    /* contact */
+    .contact .r4-container{
+        margin: 12% 0;
+    }
+    .contact .r4-container a{
+        font-size: 2.8vw;
     }
 }
 @media only screen and (max-width: 600px){
