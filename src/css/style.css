@@ -245,6 +245,9 @@ header.sticky .top-bar div p{
 .r1-p a, .r2-p a{
     cursor: pointer;
 }
+.r1-p a:hover, .r2-p a:hover{
+    color: #2179dd !important;
+}
 .r1-p .p-top, .r2-p .p-top{
     font-size: clamp(0px, 2vw, 100px) !important;
 }
